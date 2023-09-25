@@ -4,7 +4,7 @@ from typing import Mapping, Any, TypeVar, Union, Optional
 
 
 # Generic type
-T = TypeVar('~T')
+T = TypeVar('T')
 
 
 def safely_get_value(
