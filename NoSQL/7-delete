@@ -1,0 +1,4 @@
+// Script tht deletes all document with attribute in specific.
+db.school.deleteMany(
+	{ name: "Holberton school" }
+)
