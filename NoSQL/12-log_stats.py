@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     print(f"{num_logs} logs")
 
-    methods = ["GET", "POST", "PUT", "PATH", "DELETE"]
+    methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
     print("Methods:")
     for method in methods:
