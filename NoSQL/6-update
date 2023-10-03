@@ -1,0 +1,5 @@
+// Script that will update with a new attribute added to all documents with a specific attribute.
+db.school.updateMany(
+	{ "name": "Holberton school" },
+	{ $set: {address: "972 Mission street"} }
+)
