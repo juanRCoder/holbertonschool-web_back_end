@@ -1,0 +1,4 @@
+// Script that lists all documents with an atributte specific.
+db.school.find(
+	{ name: "Holberton school" }
+)
