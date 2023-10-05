@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+""" Script tht have class Server that page
+    a database of popular baby names stored in a CSV file
+"""
 import csv
 import math
 from typing import List, Tuple
