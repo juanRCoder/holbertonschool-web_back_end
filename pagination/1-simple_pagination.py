@@ -45,10 +45,10 @@ class Server:
         first_index, last_index = self.index_range(page, page_size)
 
         # longitud de todos los datos en el archivo csv.
-        data_size = len(self.dataset())
+        data = self.dataset()
+        data_size = len(data)
 
         if first_index >= data_size or last_index >= data_size:
             return []
 
-        data_slice = self.dataset()[first_index:last_index + 1]
-        return data_slice
+        return data[first_index:last_index + 1]
