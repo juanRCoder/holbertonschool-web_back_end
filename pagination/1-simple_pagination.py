@@ -48,7 +48,7 @@ class Server:
         data = self.dataset()
         data_size = len(data)
 
-        if first_index >= data_size or last_index >= data_size:
+        if first_index > data_size or last_index > data_size:
             return []
 
         return data[first_index:last_index + 1]
