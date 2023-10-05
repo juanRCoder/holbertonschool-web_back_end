@@ -6,6 +6,7 @@ import csv
 import math
 from typing import List, Tuple
 
+
 def index_range(page, page_size) -> Tuple[int, int]:
     """ return tuple that have range index of the list
     """
@@ -13,6 +14,7 @@ def index_range(page, page_size) -> Tuple[int, int]:
     last_index = page * page_size
 
     return (start_index, last_index)
+
 
 class Server:
     """Server class to paginate a database of popular baby names.
