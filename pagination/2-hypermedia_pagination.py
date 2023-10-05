@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """ Script tht have class Server that page
-    a database of popular baby names stored in a CSV file        
+    a database of popular baby names stored in a CSV file
 """
 import csv
 import math
@@ -28,7 +28,7 @@ class Server:
         """Cached dataset
         """
         if self.__dataset is None:
-            with open(self.DATA_FILE) as f:      
+            with open(self.DATA_FILE) as f:
                 reader = csv.reader(f)
                 dataset = [row for row in reader]
             self.__dataset = dataset[1:]
@@ -60,7 +60,7 @@ class Server:
         next_page = page + 1 if page < total_pages else None
         prev_page = page - 1 if page > 1 else None
 
-        return  {
+        return {
                     'page_size': len(self.get_page(page, page_size)),
                     'page': page,
                     'data': self.get_page(page, page_size),
