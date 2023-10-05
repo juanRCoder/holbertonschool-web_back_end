@@ -50,4 +50,5 @@ class Server:
         if first_index >= data_size or last_index >= data_size:
             return []
 
-        return self.dataset()[first_index:last_index + 1]
+        data_slice = self.dataset()[first_index:last_index + 1]
+        return data_slice
