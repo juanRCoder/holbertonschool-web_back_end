@@ -6,7 +6,7 @@ export default class Pricing {
     if (!(currency instanceof Currency)) throw TypeError('currency must be an instance of Currency');
     this._amount = amount;
     this._currency = currency;
-   }
+  }
 
   get amount() {
     return this._amount;
@@ -31,6 +31,6 @@ export default class Pricing {
   }
 
   convertPrice(amount, conversionRate) {
-    return amount * conversionRate;
+    return this.amount * conversionRate;
   }
 }
