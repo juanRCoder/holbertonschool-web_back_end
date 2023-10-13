@@ -1,8 +1,8 @@
 export default class HolbertonCourse {
   constructor(name, length, students) {
     if (typeof name !== 'string') throw TypeError('Invalid input type (first argument)');
-    if (typeof length !== 'length') throw TypeError('Invalid input type (second argument)');
-    if (typeof students !== 'students') throw TypeError('Invalid input type (third argument)');
+    if (typeof length !== 'number') throw TypeError('Invalid input type (second argument)');
+    if (!Array.isArray(students)) throw TypeError('Invalid input type (third argument)');
     this._name = name;
     this._length = length;
     this._students = students;
