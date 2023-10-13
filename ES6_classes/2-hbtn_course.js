@@ -1,8 +1,8 @@
 export default class HolbertonCourse {
   constructor(name, length, students) {
-    if (typeof name !== 'string') throw TypeError('Invalid input type (first argument)');
-    if (typeof length !== 'number') throw TypeError('Invalid input type (second argument)');
-    if (!Array.isArray(students)) throw TypeError('Invalid input type (third argument)');
+    if (typeof name !== 'string') throw TypeError('Name must be a string');
+    if (typeof length !== 'number') throw TypeError('Length must be a number');
+    if (!Array.isArray(students)) throw TypeError('Students must be an array');
     this._name = name;
     this._length = length;
     this._students = students;
@@ -14,7 +14,7 @@ export default class HolbertonCourse {
 
   set name(value) {
     if (typeof value === 'string') this._name = value;
-    else console.error('name is not a string');
+    else throw TypeError('Name must be a string');
   }
 
   get length() {
@@ -23,7 +23,7 @@ export default class HolbertonCourse {
 
   set length(value) {
     if (typeof value === 'number') this._length = value;
-    else console.error('length is not a number');
+    else throw TypeError('Length must be a number');
   }
 
   get students() {
@@ -32,6 +32,6 @@ export default class HolbertonCourse {
 
   set students(value) {
     if (Array.isArray(value)) this._students = value;
-    else console.error('students is not a array');
+    else throw TypeError('Students must be an array');
   }
 }
