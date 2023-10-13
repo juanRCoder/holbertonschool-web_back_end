@@ -31,6 +31,6 @@ export default class Pricing {
   }
 
   static onvertPrice(amount, conversionRate) {
-    return this.amount * conversionRate;
+    return amount * conversionRate;
   }
 }
