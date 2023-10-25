@@ -6,6 +6,7 @@ async function asyncUploadUser() {
   try {
     return { photo, user };
   } catch (e) {
+    console.error(e);
     return { photo: null, user: null };
   }
 }
